@@ -34,3 +34,9 @@ output "db_instance_username" {
   value       = aws_db_instance.prophius.username
   description = "The username for the RDS MySQL database."
 }
+
+# db instance password
+output "db_instance_password" {
+  value       = aws_db_instance.prophius.password
+  description = "The username for the RDS MySQL database."
+}

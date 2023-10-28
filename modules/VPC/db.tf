@@ -9,10 +9,9 @@ resource "aws_db_instance" "prophius" {
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t2.micro"
-  username             = var.db_instance_username
+  username             = "prophius_db"
   password             = var.db_instance_password
   publicly_accessible  = false
   skip_final_snapshot  = true
   db_subnet_group_name = aws_db_subnet_group.prophius-db-subnet.name
 }
-
