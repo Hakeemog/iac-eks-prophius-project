@@ -12,7 +12,8 @@ Before you begin, ensure that you have the following prerequisites:
   **Assumptions and considerations**
 
   Familiarity with Linux, Git and GitHub, infrastructure-as-code and DevOps has been assumed
-  Availability: For High availability and fault tolerance, instances have been replicated on different availability zones (us-east-2a, us-east-2b) within the same region.
+  Availability: For High availability and fault tolerance, instances have been replicated on different availability zones (us-east-2a, 
+  us-east-2b) within the same region.
   Security: Principle of Least Privilege was considered when assigning policy to IAM role for the cluster.
   Security: Public access to the MySQL database has been disabled
 
@@ -95,6 +96,7 @@ https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/EKS-master.PNG
 https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/eks-worker-instances.PNG
 https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/mysql-database.PNG
 https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/mysql-database.PNG
+https://github.com/Hakeemog/iac-eks-prophius-project/commit/9571e78194320eb95307bf124bf3101b94774471
 
 The terraform state of the infrastructure is stored here:
 https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/s3-backend.PNG
