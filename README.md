@@ -12,9 +12,11 @@ Before you begin, ensure that you have the following prerequisites:
 **Step 1: Create the terraform codes for the infrastructure**
 
 i First, create the prophius-project directory where all folders and subfolders for my files are stored.
+
 ii Create of providers and s3 backend for state files
-iii Create all the modules; VPC, EKS, IAM, key-pair security_groups and their corresponding main.tf, output.tf and variables.tf file using terraform documentations
-iv Configuration of EKS cluster, DB and ECR
+
+iii Create all the modules; VPC, EKS, IAM, key-pair security_groups and their corresponding main.tf, output.tf and variables.tf file using terraform hashicorp documentations
+iv Configuration of EKS cluster, DB and ECR files
 
 **Step 2: Set AWS Credentials**
 
