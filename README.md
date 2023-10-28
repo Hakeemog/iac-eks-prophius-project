@@ -11,10 +11,10 @@ Before you begin, ensure that you have the following prerequisites:
 
 **Step 1: Create the terraform codes for the infrastructure**
 
-i First, create the prophius-project directory where all folders and subfolders for my files are stored.
-ii Create of providers and s3 backend for state files
+i First, create the prophius-project directory where all folders and subfolders for your files are stored.ii Create providers and s3 backend for state files. 
 iii Create all the modules; VPC, EKS, IAM, key-pair security_groups and their corresponding main.tf, output.tf and variables.tf file using terraform documentations
-iv Configuration of EKS cluster, DB and ECR
+iv Configuration of EKS cluster, DB and ECR.
+Visit terraform docs https://developer.hashicorp.com/terraform/docs for all modules and TF files. 
 
 **Step 2: Set AWS Credentials**
 
@@ -28,13 +28,14 @@ Run the following command in the working directory to initialize Terraform:
 
 ``terraform init``
 
-This command downloads all the necessary providers and initializes the Terraform backend.
+This command downloads all the necessary providers and initializes the Terraform backend. I have added a snapshot of the init here: https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/backend_provider_init.PNG
 
 **Step 4: Create a Terraform Plan**
 
 Generate a Terraform execution plan to preview the changes:
 
 ``terraform plan``
+I have added my terraform plan here: https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/terraform-plan
 
 The terraform plan command provides an overview of the resources that Terraform will create or modify.
 
@@ -44,7 +45,8 @@ Apply the Terraform plan to create the EKS cluster on AWS:
 
 ``terraform apply``
 
-Terraform will create various AWS resources, including the VPC, Route Table, Subnets, IAM Role, Internet Gateway, Security Group, Worker Nodes, and the EKS Cluster itself.
+Terraform will create various AWS resources, including the VPC, Route Table, Subnets, IAM Role, Internet Gateway, Security Group, elastic container registry (ecr), database, Worker Nodes, and the EKS Cluster itself.
+I have added my plan here: https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/Infra-deployment.PNG
 
 **Step 6: Configure Kubectl**
 
@@ -74,18 +76,24 @@ Verify that your EKS cluster is running and accessible by running:
 
 ``kubectl get nodes``
 
+https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/working-nodes.PNG
+
 You should see a list of worker nodes in your cluster, indicating that your EKS cluster is up and runningin AWS Console.
 
 That's it! You've successfully created an AWS EKS cluster using Terraform.
 
+The following snapshots indicate the various resources deployed on AWS by the iac configuration:
+https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/container-registry.PNG
+https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/EKS-master.PNG
+https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/eks-worker-instances.PNG
+https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/mysql-database.PNG
+https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/mysql-database.PNG
 
+The terraform state of the infrastructure is stored here:
+https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/s3-backend.PNG
 
-
-
-
-
-
-
+The link to the infrastructure architetural diagram is below:
+https://github.com/Hakeemog/iac-eks-prophius-project/blob/staging/Architecture.png 
 
 
 
