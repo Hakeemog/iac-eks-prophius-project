@@ -1,6 +1,8 @@
 # Creating VPC
 module "vpc" {
   source       = "./modules/VPC"
+  db_instance_username = var.project_name
+  db_instance_password = var.project_name
   project_name = var.project_name
   env          = var.env
   type         = var.type

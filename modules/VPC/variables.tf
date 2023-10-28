@@ -30,3 +30,10 @@ variable "public_subnet_az2_cidr" {
   type    = string
   default = "10.0.2.0/24"
 }
+# DB username
+variable "db_instance_username" {
+  type    = string 
+}
+variable "db_instance_password" {
+  type    = string 
+}

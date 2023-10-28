@@ -20,17 +20,17 @@ output "internet_gateway" {
 
 # ecr repository url
 output "ecr_repository_url" {
-  value       = aws_ecr_repository.my_ecr_repository.repository_url
+  value       = aws_ecr_repository.prophius.repository_url
   description = "The URL of the ECR repository."
 }
 
 # db instance endpoint
 output "db_instance_endpoint" {
-  value       = aws_db_instance.my_db_instance.endpoint
+  value       = aws_db_instance.prophius.endpoint
   description = "The endpoint of the RDS MySQL database."
 }
 # db instance username
 output "db_instance_username" {
-  value       = aws_db_instance.my_db_instance.username
+  value       = aws_db_instance.prophius.username
   description = "The username for the RDS MySQL database."
 }
