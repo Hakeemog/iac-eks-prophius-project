@@ -9,6 +9,13 @@ Before you begin, ensure that you have the following prerequisites:
   Terraform installed on your local machine.
   AWS CLI installed and configured with appropriate IAM permissions.
 
+  **Assumptions and considerations**
+
+  Familiarity with Linux, Git and GitHub, infrastructure-as-code and DevOps has been assumed
+  Availability: For High availability and fault tolerance, instances have been replicated on different availability zones (us-east-2a, us-east-2b) within the same region.
+  Security: Principle of Least Privilege was considered when assigning policy to IAM role for the cluster.
+  Security: Public access to the MySQL database has been disabled
+
 **Step 1: Create the terraform codes for the infrastructure**
 
 i First, create the prophius-project directory where all folders and subfolders for your files are stored.ii Create providers and s3 backend for state files. 
